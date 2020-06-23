@@ -18,7 +18,7 @@ setup_options = {
 def setup(opts):
     msg = '[SETUP] Ran with options: file = {}'
     print(msg.format(opts['checkpoint']))
-    model = TextModel(options)
+    model = TextModel(opts)
     # model = TextModel({'checkpoint': 'QBIGrun1-13700'})
     return model
 
