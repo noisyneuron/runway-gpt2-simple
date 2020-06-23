@@ -1,6 +1,7 @@
 
 import random
 import gpt_2_simple as gpt2
+import os
 from PIL import Image
 
 class TextModel():
@@ -8,13 +9,17 @@ class TextModel():
     def __init__(self, options):
         #random.seed(options['seed'])
         self.sess = gpt2.start_tf_sess()
-        gpt2.load_gpt2(self.sess, model_name=options['checkpoint'])
+        self.modelname = options['checkpoint']
+        gpt2.load_gpt2(self.sess,
+                    model_name=self.modelname,
+                    model_dir='')
 
     # Generate an image based on some text.
     def run_on_input(self, caption_text):
 
         txt = gpt2.generate(self.sess,
-              model_name=model_name,
+              model_dir='',
+              model_name=self.modelname,
               prefix=caption_text,
               length=200,
               temperature=1.0,

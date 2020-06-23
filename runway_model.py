@@ -18,7 +18,8 @@ setup_options = {
 def setup(opts):
     msg = '[SETUP] Ran with options: file = {}'
     print(msg.format(opts['checkpoint']))
-    model = TextModel(opts)
+    model = TextModel(options)
+    # model = TextModel({'checkpoint': 'QBIGrun1-13700'})
     return model
 
 
@@ -37,4 +38,4 @@ def generate(model, args):
 
 
 if __name__ == '__main__':
-    runway.run(host='0.0.0.0', port=8000, debug=True)
+    runway.run(host='0.0.0.0', port=8000)
