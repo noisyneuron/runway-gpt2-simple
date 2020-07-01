@@ -44,7 +44,7 @@ def generate(model, args):
     txt = gpt2.generate(model['sess'],
           model_dir='',
           model_name=model['modelname'],
-          prefix=question,
+          prefix=inputs['question'],
           length=inputs['length'],
           temperature=inputs['temperature'],
           top_p=0.9,
