@@ -44,13 +44,13 @@ def generate(model, args):
     txt = gpt2.generate(model['sess'],
           model_dir='',
           model_name=model['modelname'],
-          prefix=inputs['question'],
-          length=inputs['length'],
-          temperature=inputs['temperature'],
+          prefix=args['question'],
+          length=args['length'],
+          temperature=args['temperature'],
           top_p=0.9,
           top_k=40,
-          nsamples=inputs['samples'],
-          batch_size=inputs['samples'],
+          nsamples=args['samples'],
+          batch_size=args['samples'],
           return_as_list=True
           )
 
