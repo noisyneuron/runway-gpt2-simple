@@ -1,3 +1,2 @@
 runway-python
-Pillow==6.2.0
 gpt-2-simple

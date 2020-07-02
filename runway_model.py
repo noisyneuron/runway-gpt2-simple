@@ -1,10 +1,10 @@
-
-import runway
 import os
-from runway.data_types import number, text, image, file, array
 import random
-import gpt_2_simple as gpt2
 import re
+import runway
+from runway.data_types import number, text, image, file, array
+import gpt_2_simple as gpt2
+
 
 setup_options = {
     'checkpoint': file(is_directory=True)

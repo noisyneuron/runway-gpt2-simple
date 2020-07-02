@@ -1,1 +1,1 @@
-# runway sdk test
+# runway sdk wrapper for gpt2-simple
