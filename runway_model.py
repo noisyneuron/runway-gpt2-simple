@@ -52,7 +52,7 @@ def generate(model, args):
           return_as_list=True
           )
 
-    print(txt)
+    print('[GENERATE] {} answers'.format(len(txt)))
 
     answer = txt[0]
     cleanedAns = 'I am too tired to answer right now. Go away.'
